@@ -8,4 +8,3 @@ tiktoken==0.6.0
 PyPDF2==3.0.1
 PyMuPDF==1.23.24
 langchain_community
-sq
