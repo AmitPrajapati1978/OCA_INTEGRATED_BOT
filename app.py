@@ -1,17 +1,18 @@
 from langchain.chains import RetrievalQA
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.callbacks.manager import CallbackManager
-from langchain.llms import Ollama
-from langchain.embeddings.ollama import OllamaEmbeddings
-from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import PyPDFLoader
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 import streamlit as st
 import os
 import time
 import shutil
+
+from langchain_community.llms import Ollama
+from langchain_community.embeddings.ollama import OllamaEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_community.document_loaders import PyPDFLoader
 
 if not os.path.exists('files'):
     os.mkdir('files')
